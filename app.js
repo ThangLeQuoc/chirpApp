@@ -13,7 +13,7 @@ var authenticate = require('./routes/authenticate')(passport);
 var app = express();
 
 // connect to mongodb
-mongoose.connect("mongodb://localhost/chirp-test");
+mongoose.connect("mongodb://thangle:thangdeptrai@ds044679.mlab.com:44679/chirpapp");
 
 
 
