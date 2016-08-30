@@ -1,0 +1,52 @@
+<div class="container">
+    <br>
+    <div class="col-md-8">
+        <div class="modal-dialog" style="margin-bottom:0">
+            <div class="modal-content">
+                <div class="panel-heading">
+                    <h1 class="panel-title text-primary">Sign Up</h1>
+                </div>
+                <div class="panel-body">
+                    <form role="form" ng-submit="authCtrl.register()">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Username" autofocus="" ng-model="authCtrl.user.username">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Password" name="password" type="password" value="" ng-model="authCtrl.user.password">
+                            </div>
+                            <br/>
+                            <p class="text-warning">{{authCtrl.error_message}}</p>
+                            <!-- Change this to a button or input when using this as a form -->
+                            <input type="submit" align="center" class="btn btn-sm btn-success" value="Sign Up">
+                        </fieldset>
+                    </form>
+                     <div class="jumbotron">
+        <h2 class="text-info">Policy</h2>
+        <p>The content of your post on the public feed might not be removed, or re-edited by yourself. Be responsible for what you say to the public. :) </p>
+        <p class="text-danger" align="center">USE AT YOUR OWN RISK >:) </p>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--
+    <form class="form-auth" ng-submit="authCtrl.register()">
+        <h2>Register</h2>
+        <input type="username" class="form-control" placeholder="Username" ng-model="authCtrl.user.username"><br>
+        <input type="password" class="form-control" placeholder="Password" ng-model="authCtrl.user.password"><br/>
+        <input type="submit" class="btn btn-primary" value="Register"><br/><br/>
+        <p class="text-warning">{{authCtrl.error_message}}</p>
+    </form>
+    <div class="container">
+        <h2 class="text-info">Policy</h2>
+        <p>The content of your post on the public feed might not be removed, or re-edited by yourself. Be responsible for what you say to the public. :) </p>
+        <p class="text-danger">USE AT YOUR OWN RISK >:) </p>
+    </div>
+-->
+
+
+
+</div>

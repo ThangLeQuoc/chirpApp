@@ -1,0 +1,47 @@
+<!-- this page is act as a template for the whole website -->
+<html>
+
+<head>
+    <title>Chirp</title>
+    <meta name="author" content="Thang Le Quoc">
+    <meta name="contact_info" content="silverhair.guy@gmail.com">
+    <link rel="icon" href="images/Skull-icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+   <link rel="icon" href="http://example.com/favicon.png">
+
+    <script src="javascripts/app.js"></script>
+        
+    </script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body ng-app="chirpApp">
+
+    <div id='main' class="container">
+        <nav class='navbar-fluid navbar-default navbar-fixed-top'>
+            <div class="container">
+                <a class="navbar-brand" href="#/">Chirp!</a>
+
+                <p class="navbar-text">Spread your idea, share your thoughts :) </p>
+
+                <p class="navbar-right navbar-text" ng-hide="authenticated"> <a href="#/login">Login</a> or <a href="#/register">Register</a></p>
+                <p class = "navbar-right navbar-text" ng-show="authenticated"><a href="#" ng-click="signout()">Sign out</a></p>
+                <p class="navbar-right navbar-text" ng-show="authenticated">Signed in as {{current_user}}</p>
+                
+            </div>
+        </nav>
+
+        <!-- Insert stuff in ng-view div tag-->
+        <div class="col-md-offset-2 col-md-8">
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+
+</html>
